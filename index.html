@@ -327,11 +327,11 @@
             transition: all 0.3s ease;
         }
         .cert-card:hover { transform: translateY(-4px); border-color: var(--accent-purple); }
-        .cert-icon { width: 50px; height: 50px; border-radius: 12px; margin: 0 auto 1rem; }
-        .cert-icon.blue { background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); }
-        .cert-icon.purple { background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink)); }
-        .cert-icon.orange { background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow)); }
-        .cert-icon.green { background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan)); }
+        .cert-icon { width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.75rem; }
+        .cert-icon.blue { background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2)); }
+        .cert-icon.purple { background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)); }
+        .cert-icon.orange { background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 179, 8, 0.2)); }
+        .cert-icon.green { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(6, 182, 212, 0.2)); }
         .cert-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem; }
         .cert-issuer { font-size: 0.8rem; color: var(--text-secondary); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -341,13 +341,14 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 1.25rem 1.5rem;
+            padding: 1rem 1.25rem;
             text-align: center;
             flex: 1;
             transition: all 0.2s ease;
         }
         .hobby-card:hover { border-color: var(--accent-blue); }
-        .hobby-name { font-size: 0.9rem; color: var(--text-secondary); }
+        .hobby-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .hobby-name { font-size: 0.85rem; color: var(--text-secondary); }
         .about-image { display: flex; justify-content: center; }
         .about-image-wrapper { position: relative; }
         .about-image-wrapper img { width: 320px; height: 320px; object-fit: cover; border-radius: 24px; border: 2px solid var(--border-color); }
@@ -492,7 +493,7 @@
                         <span class="exp-badge">Current</span>
                     </div>
                     <p class="exp-description">
-                        Design and maintain Tableau and Excel dashboards for leadership to monitor revenue, track operational KPIs, and support scheduling decisions. Deliver 10+ ad-hoc analyses weekly using SQL and Python. Built Python ETL pipeline integrating with CRM API across 200+ monthly projects. Automated data entry workflows, eliminating 20+ hours of manual work monthly.
+                        Design and maintain Tableau and Excel dashboards for leadership to monitor revenue, track operational KPIs, and support scheduling decisions. Deliver ad-hoc analyses using SQL and Python. Built Python ETL pipeline integrating with CRM API across 200+ monthly projects. Automated data entry workflows, eliminating 20+ hours of manual work monthly.
                     </p>
                 </div>
                 <div class="exp-card animate">
@@ -682,22 +683,22 @@
         </div>
         <div class="certs-grid">
             <div class="cert-card animate">
-                <div class="cert-icon blue"></div>
+                <div class="cert-icon blue">📊</div>
                 <div class="cert-name">CompTIA Data+</div>
                 <div class="cert-issuer">CompTIA</div>
             </div>
             <div class="cert-card animate">
-                <div class="cert-icon purple"></div>
+                <div class="cert-icon purple">📋</div>
                 <div class="cert-name">CompTIA Project+</div>
                 <div class="cert-issuer">CompTIA</div>
             </div>
             <div class="cert-card animate">
-                <div class="cert-icon orange"></div>
+                <div class="cert-icon orange">☁️</div>
                 <div class="cert-name">AWS Cloud Practitioner</div>
                 <div class="cert-issuer">Amazon Web Services</div>
             </div>
             <div class="cert-card animate">
-                <div class="cert-icon green"></div>
+                <div class="cert-icon green">🎓</div>
                 <div class="cert-name">BS Data Analytics</div>
                 <div class="cert-issuer">Western Governors University, 2024</div>
             </div>
@@ -715,12 +716,15 @@
                     <p>I'm a data analyst based in North Carolina. I focus on building dashboards, automating reporting, and using data to support better business decisions.</p>
                     <div class="about-hobbies">
                         <div class="hobby-card">
+                            <div class="hobby-icon">🏗️</div>
                             <div class="hobby-name">Building Models</div>
                         </div>
                         <div class="hobby-card">
+                            <div class="hobby-icon">🏃</div>
                             <div class="hobby-name">Sports and Fitness</div>
                         </div>
                         <div class="hobby-card">
+                            <div class="hobby-icon">🍺</div>
                             <div class="hobby-name">Craft Breweries</div>
                         </div>
                     </div>
@@ -739,7 +743,7 @@
             <div class="section-header">
                 <div class="section-badge">Contact</div>
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Looking for Data Analyst opportunities in NC or remote.</p>
+                <p class="section-subtitle">Looking for data and analytics roles in NC or remote.</p>
             </div>
             <div class="contact-links">
                 <a href="mailto:drappanalysis@gmail.com" class="contact-link">
@@ -759,7 +763,7 @@
     </section>
 
     <footer>
-        <p>2025 Davis Rapp</p>
+        <p>© 2026 Davis Rapp</p>
     </footer>
 
     <script>
