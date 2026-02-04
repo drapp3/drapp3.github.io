@@ -513,125 +513,88 @@
         </div>
     </section>
 
-    <section id="projects">
-        <div class="section-header">
-            <div class="section-badge">Featured Work</div>
-            <h2 class="section-title">Projects</h2>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card animate">
-                <span class="project-category analytics">Data Analytics</span>
-                <h3>Job Market Analysis</h3>
-                <div class="project-details">
-                    <div class="project-detail">
-                        <span class="project-detail-label">Problem:</span>
-                        <span>Understand hiring trends and salary patterns in the data analyst job market</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Data:</span>
-                        <span>2,250+ job postings scraped and cleaned</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Outcome:</span>
-                        <span>K-means clustering revealed distinct market segments; interactive Tableau dashboard published</span>
-                    </div>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">pandas</span>
-                    <span class="project-tag">scikit-learn</span>
-                    <span class="project-tag">Tableau</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/drapp3/data-analyst-job-market-analysis#readme" class="project-link-secondary">View README</a>
-                    <a href="https://github.com/drapp3/data-analyst-job-market-analysis" class="project-link">View Project</a>
-                </div>
+   <style>
+    @media (min-width: 992px) {
+        .projects-grid { 
+            grid-template-columns: repeat(2, 1fr) !important; 
+        }
+    }
+</style>
+
+<section id="projects">
+    <div class="section-header">
+        <div class="section-badge">Featured Work</div>
+        <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid">
+        
+        <div class="project-card animate">
+            <span class="project-category analytics">Data Analytics</span>
+            <h3>Job Market Analysis</h3>
+            <div class="project-details">
+                <div class="project-detail"><span class="project-detail-label">Problem:</span><span>Understand hiring trends and salary patterns in the data analyst job market</span></div>
+                <div class="project-detail"><span class="project-detail-label">Data:</span><span>2,250+ job postings scraped and cleaned</span></div>
+                <div class="project-detail"><span class="project-detail-label">Outcome:</span><span>K-means clustering revealed distinct market segments; interactive Tableau dashboard published</span></div>
             </div>
-            <div class="project-card animate">
-                <span class="project-category ml">Machine Learning</span>
-                <h3>Insurance Fraud Detection</h3>
-                <div class="project-details">
-                    <div class="project-detail">
-                        <span class="project-detail-label">Problem:</span>
-                        <span>Identify fraudulent auto insurance claims before payout</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Data:</span>
-                        <span>15,000+ claims with 30+ features</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Outcome:</span>
-                        <span>61% recall, 0.67 ROC-AUC; estimated $98K annual savings</span>
-                    </div>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">scikit-learn</span>
-                    <span class="project-tag">Classification</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/drapp3/auto-insurance-fraud-detection#readme" class="project-link-secondary">View README</a>
-                    <a href="https://github.com/drapp3/auto-insurance-fraud-detection" class="project-link">View Project</a>
-                </div>
+            <div class="project-tags">
+                <span class="project-tag">Python</span><span class="project-tag">pandas</span><span class="project-tag">scikit-learn</span><span class="project-tag">Tableau</span>
             </div>
-            <div class="project-card animate">
-                <span class="project-category automation">Dashboard</span>
-                <h3>Sales Performance Dashboard</h3>
-                <div class="project-details">
-                    <div class="project-detail">
-                        <span class="project-detail-label">Problem:</span>
-                        <span>Enable leadership to track sales KPIs across regions and products</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Data:</span>
-                        <span>Multi-source sales data cleaned via Power Query</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Outcome:</span>
-                        <span>Interactive Excel dashboard with slicers for region, product, and time filtering</span>
-                    </div>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">Excel</span>
-                    <span class="project-tag">Power Query</span>
-                    <span class="project-tag">Pivot Tables</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/drapp3/sales-performance-dashboard#readme" class="project-link-secondary">View README</a>
-                    <a href="https://github.com/drapp3/sales-performance-dashboard" class="project-link">View Project</a>
-                </div>
-                <div class="project-card animate">
-                    <span class="project-category analytics">Healthcare Analytics</span>
-                    <h3>Hospital Readmission Analysis</h3>
-                    <div class="project-details">
-                        <div class="project-detail">
-                            <span class="project-detail-label">Problem:</span>
-                            <span>Identify drivers of 30-day hospital readmissions</span>
-                        </div>
-                        <div class="project-detail">
-                            <span class="project-detail-label">Data:</span>
-                            <span>CMS hospital discharge data</span>
-                        </div>
-                        <div class="project-detail">
-                            <span class="project-detail-label">Outcome:</span>
-                            <span>Logistic regression model + feature importance analysis</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">pandas</span>
-                        <span class="project-tag">scikit-learn</span>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://github.com/drapp3/hospital-readmission-analysis#readme"
-                           class="project-link-secondary">View README</a>
-                        <a href="https://github.com/drapp3/hospital-readmission-analysis"
-                           class="project-link">View Project</a>
-                    </div>
-                </div>
+            <div class="project-footer">
+                <a href="https://github.com/drapp3/data-analyst-job-market-analysis#readme" class="project-link-secondary">View README</a>
+                <a href="https://github.com/drapp3/data-analyst-job-market-analysis" class="project-link">View Project</a>
             </div>
         </div>
-    </section>
+
+        <div class="project-card animate">
+            <span class="project-category ml">Machine Learning</span>
+            <h3>Insurance Fraud Detection</h3>
+            <div class="project-details">
+                <div class="project-detail"><span class="project-detail-label">Problem:</span><span>Identify fraudulent auto insurance claims before payout</span></div>
+                <div class="project-detail"><span class="project-detail-label">Data:</span><span>15,000+ claims with 30+ features</span></div>
+                <div class="project-detail"><span class="project-detail-label">Outcome:</span><span>61% recall, 0.67 ROC-AUC; estimated $98K annual savings</span></div>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Python</span><span class="project-tag">scikit-learn</span><span class="project-tag">Classification</span>
+            </div>
+            <div class="project-footer">
+                <a href="https://github.com/drapp3/auto-insurance-fraud-detection#readme" class="project-link-secondary">View README</a>
+                <a href="https://github.com/drapp3/auto-insurance-fraud-detection" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-card animate">
+            <span class="project-category automation">Dashboard</span>
+            <h3>Sales Performance Dashboard</h3>
+            <div class="project-details">
+                <div class="project-detail"><span class="project-detail-label">Problem:</span><span>Enable leadership to track sales KPIs across regions and products</span></div>
+                <div class="project-detail"><span class="project-detail-label">Data:</span><span>Multi-source sales data cleaned via Power Query</span></div>
+                <div class="project-detail"><span class="project-detail-label">Outcome:</span><span>Interactive Excel dashboard with slicers for region, product, and time filtering</span></div>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Excel</span><span class="project-tag">Power Query</span><span class="project-tag">Pivot Tables</span>
+            </div>
+            <div class="project-footer">
+                <a href="https://github.com/drapp3/sales-performance-dashboard#readme" class="project-link-secondary">View README</a>
+                <a href="https://github.com/drapp3/sales-performance-dashboard" class="project-link">View Project</a>
+            </div>
+        </div> <div class="project-card animate">
+            <span class="project-category analytics">Healthcare Analytics</span>
+            <h3>Hospital Readmission Analysis</h3>
+            <div class="project-details">
+                <div class="project-detail"><span class="project-detail-label">Problem:</span><span>Identify drivers of 30-day hospital readmissions</span></div>
+                <div class="project-detail"><span class="project-detail-label">Data:</span><span>CMS hospital discharge data</span></div>
+                <div class="project-detail"><span class="project-detail-label">Outcome:</span><span>Logistic regression model + feature importance analysis</span></div>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Python</span><span class="project-tag">pandas</span><span class="project-tag">scikit-learn</span>
+            </div>
+            <div class="project-footer">
+                <a href="https://github.com/drapp3/hospital-readmission-analysis#readme" class="project-link-secondary">View README</a>
+                <a href="https://github.com/drapp3/hospital-readmission-analysis" class="project-link">View Project</a>
+            </div>
+        </div>
+
+    </div> </section> 
 
     <section id="skills">
         <div class="section-header">
