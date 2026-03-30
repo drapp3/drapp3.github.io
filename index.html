@@ -241,6 +241,9 @@
             flex-direction: column;
         }
         .project-card:hover { transform: translateY(-6px); border-color: var(--accent-blue); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .project-card.featured {
+            grid-column: 1 / -1;
+        }
         .project-category {
             display: inline-flex;
             align-items: center;
@@ -256,6 +259,7 @@
         .project-category.automation { background: rgba(234, 179, 8, 0.15); color: var(--accent-yellow); }
         .project-category.ml { background: rgba(139, 92, 246, 0.15); color: var(--accent-purple); }
         .project-category.healthcare { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); }
+        .project-category.engineering { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
         .project-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3; }
         .project-details { flex-grow: 1; margin-bottom: 1.25rem; }
         .project-detail { display: flex; gap: 0.5rem; margin-bottom: 0.6rem; font-size: 0.9rem; color: var(--text-secondary); }
@@ -389,6 +393,7 @@
             .hero-right { flex: none; width: 100%; max-width: 380px; }
             .hero-buttons, .social-links { justify-content: center; }
             .projects-grid, .experience-grid, .about-grid { grid-template-columns: 1fr; }
+            .project-card.featured { grid-column: auto; }
             section { padding: 3rem 1.5rem; }
         }
         @media (max-width: 768px) {
@@ -425,15 +430,15 @@
             </div>
             <h1>Making data<br><span class="gradient">useful.</span></h1>
             <p class="hero-description">
-                Hi, I'm Davis Rapp. I help businesses make data-driven decisions through dashboards, automation, and analytics. With expertise in SQL, Python, Tableau, and Excel, I turn complex data into clear strategies that drive results.
+                Hi, I'm Davis Rapp. I build dashboards, automate reporting, and turn complex data into clear, actionable insights. I work across SQL, Python, Tableau, and Excel to help teams make better decisions with the data they already have.
             </p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">
                     View My Work
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="Davis_Rapp_Resume(1).pdf" class="btn btn-secondary" download>
-                    Download Resume
+                <a href="#contact" class="btn btn-secondary">
+                    Get In Touch
                 </a>
             </div>
             <div class="social-links">
@@ -485,14 +490,14 @@
                 <div class="exp-card animate">
                     <div class="exp-header">
                         <div>
-                            <h3 class="exp-title">Data Analyst (Freelance)</h3>
+                            <h3 class="exp-title">Data Analytics Consultant</h3>
                             <div class="exp-company">DryWorx</div>
-                            <div class="exp-date">Sept 2023 - Present</div>
+                            <div class="exp-date">Sept 2023 – Present</div>
                         </div>
                         <span class="exp-badge">Current</span>
                     </div>
                     <p class="exp-description">
-                        Design and maintain Tableau and Excel dashboards for leadership to monitor revenue, track operational KPIs, and support scheduling decisions. Deliver 10+ ad-hoc analyses per week using SQL and Python. Built Python ETL pipeline integrating with CRM API across 200+ monthly projects. Automated data entry workflows, eliminating 20+ hours of manual work monthly.
+                        Built a Python ETL pipeline and automated data entry workflows for Jobber CRM data across 200+ monthly projects, reducing manual workload by 20+ hours per month and improving data consistency. Developed Tableau and Excel dashboards used by leadership to monitor revenue, close rates, and crew efficiency. Delivered SQL and Python analyses on service profitability, job delays, and sales performance, directly informing pricing adjustments and workflow decisions.
                     </p>
                 </div>
                 <div class="exp-card animate">
@@ -500,12 +505,12 @@
                         <div>
                             <h3 class="exp-title">Physical Therapist Assistant (PRN)</h3>
                             <div class="exp-company">Broad River Rehab</div>
-                            <div class="exp-date">Feb 2020 - Present</div>
+                            <div class="exp-date">Feb 2021 – Present</div>
                         </div>
                         <span class="exp-badge">Current</span>
                     </div>
                     <p class="exp-description">
-                        Tracked patient outcomes using metrics like range of motion, pain scores, and mobility to support treatment planning. Collaborated with physical therapists and physicians on treatment plans informed by patient outcome data. Maintained electronic health records for 1,000+ patients with full documentation compliance.
+                        Analyzed patient outcome metrics including range of motion, pain scores, and functional mobility to evaluate treatment effectiveness. Maintained electronic health records for 1,000+ patients across multiple facilities with full documentation compliance.
                     </p>
                 </div>
             </div>
@@ -520,11 +525,11 @@
         <div class="projects-grid">
             <div class="project-card animate">
                 <span class="project-category healthcare">Healthcare Analytics</span>
-                <h3>Hospital Readmission Prediction</h3>
+                <h3>Inpatient Readmission Risk Analysis</h3>
                 <div class="project-details">
                     <div class="project-detail">
                         <span class="project-detail-label">Problem:</span>
-                        <span>Predict 30-day hospital readmissions to enable earlier intervention and reduce CMS penalties</span>
+                        <span>Identify drivers of 30-day hospital readmissions and segment patients by risk level</span>
                     </div>
                     <div class="project-detail">
                         <span class="project-detail-label">Data:</span>
@@ -538,12 +543,40 @@
                 <div class="project-tags">
                     <span class="project-tag">Python</span>
                     <span class="project-tag">scikit-learn</span>
-                    <span class="project-tag">CMS API</span>
+                    <span class="project-tag">Tableau</span>
                     <span class="project-tag">Random Forest</span>
                 </div>
                 <div class="project-footer">
                     <a href="https://github.com/drapp3/hospital-readmission-analysis#readme" class="project-link-secondary">View README</a>
                     <a href="https://github.com/drapp3/hospital-readmission-analysis" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card animate">
+                <span class="project-category ml">Machine Learning</span>
+                <h3>Auto Insurance Fraud Detection</h3>
+                <div class="project-details">
+                    <div class="project-detail">
+                        <span class="project-detail-label">Problem:</span>
+                        <span>Identify fraudulent auto insurance claims before payout</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Data:</span>
+                        <span>15,000+ claims with 30+ features</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Outcome:</span>
+                        <span>61% recall, 0.67 ROC-AUC; estimated $98K annual savings</span>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">scikit-learn</span>
+                    <span class="project-tag">SMOTE</span>
+                    <span class="project-tag">Classification</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/drapp3/auto-insurance-fraud-detection#readme" class="project-link-secondary">View README</a>
+                    <a href="https://github.com/drapp3/auto-insurance-fraud-detection" class="project-link">View Project</a>
                 </div>
             </div>
             <div class="project-card animate">
@@ -575,33 +608,6 @@
                 </div>
             </div>
             <div class="project-card animate">
-                <span class="project-category ml">Machine Learning</span>
-                <h3>Insurance Fraud Detection</h3>
-                <div class="project-details">
-                    <div class="project-detail">
-                        <span class="project-detail-label">Problem:</span>
-                        <span>Identify fraudulent auto insurance claims before payout</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Data:</span>
-                        <span>15,000+ claims with 30+ features</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Outcome:</span>
-                        <span>61% recall, 0.67 ROC-AUC; estimated $98K annual savings</span>
-                    </div>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">scikit-learn</span>
-                    <span class="project-tag">Classification</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/drapp3/auto-insurance-fraud-detection#readme" class="project-link-secondary">View README</a>
-                    <a href="https://github.com/drapp3/auto-insurance-fraud-detection" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card animate">
                 <span class="project-category automation">Dashboard</span>
                 <h3>Sales Performance Dashboard</h3>
                 <div class="project-details">
@@ -628,6 +634,36 @@
                     <a href="https://github.com/drapp3/sales-performance-dashboard" class="project-link">View Project</a>
                 </div>
             </div>
+            <div class="project-card featured animate">
+                <span class="project-category engineering">Data Engineering</span>
+                <h3>Polymarket Wallet Tracker</h3>
+                <div class="project-details">
+                    <div class="project-detail">
+                        <span class="project-detail-label">Problem:</span>
+                        <span>Track top-performing prediction market traders in real time and surface where sharp money is moving</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Stack:</span>
+                        <span>Python FastAPI backend with five concurrent async polling loops, SQLite with WAL mode, vanilla JS frontend</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Outcome:</span>
+                        <span>Real-time alert system with trade diffing, resolution tracking, wallet sharpness scoring, and market convergence detection</span>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">FastAPI</span>
+                    <span class="project-tag">Async</span>
+                    <span class="project-tag">SQLite</span>
+                    <span class="project-tag">REST APIs</span>
+                    <span class="project-tag">ETL</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/drapp3/polymarket-wallet-tracker#readme" class="project-link-secondary">View README</a>
+                    <a href="https://github.com/drapp3/polymarket-wallet-tracker" class="project-link">View Project</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -640,7 +676,7 @@
             <div class="skills-group">
                 <div class="skills-group-title">Languages</div>
                 <div class="skills-tags">
-                    <span class="skill-tag">SQL (MySQL, PostgreSQL)</span>
+                    <span class="skill-tag">SQL (PostgreSQL, MySQL)</span>
                     <span class="skill-tag">Python (pandas, NumPy, scikit-learn)</span>
                 </div>
             </div>
@@ -658,7 +694,6 @@
                     <span class="skill-tag">Data Cleaning</span>
                     <span class="skill-tag">Data Modeling</span>
                     <span class="skill-tag">Dashboards</span>
-                    <span class="skill-tag">Ad-Hoc Reporting</span>
                     <span class="skill-tag">Statistical Analysis</span>
                 </div>
             </div>
@@ -679,23 +714,23 @@
         <div class="section-inner">
             <div class="section-header">
                 <div class="section-badge">Side Projects</div>
-                <h2 class="section-title">Sports Analytics</h2>
+                <h2 class="section-title">Quantitative Modeling</h2>
             </div>
             <div class="side-projects-content animate">
                 <p class="side-projects-text">
-                    I use sports data as a sandbox for quantitative modeling and decision-making under uncertainty. These projects are built in Python.
+                    I use sports and prediction market data as a sandbox for building quantitative models and testing decision-making under uncertainty. These projects are built in Python and focus on real-time data collection, statistical modeling, and simulation.
                 </p>
                 <div class="side-projects-list">
                     <div class="side-project-item">
-                        <span class="side-project-text">Python scripts for pulling real-time odds and lines data</span>
+                        <span class="side-project-text">Real-time data pipelines for collecting and structuring market pricing data</span>
                         <span class="side-project-status done">Complete</span>
                     </div>
                     <div class="side-project-item">
-                        <span class="side-project-text">Statistical models for player prop predictions</span>
+                        <span class="side-project-text">Statistical models for player performance projections</span>
                         <span class="side-project-status done">Complete</span>
                     </div>
                     <div class="side-project-item">
-                        <span class="side-project-text">Web scraper and simulation tools</span>
+                        <span class="side-project-text">Web scraping and Monte Carlo simulation tools</span>
                         <span class="side-project-status wip">In Progress</span>
                     </div>
                 </div>
@@ -727,7 +762,7 @@
             <div class="cert-card animate">
                 <div class="cert-icon green">🎓</div>
                 <div class="cert-name">BS Data Analytics</div>
-                <div class="cert-issuer">Western Governors University, 2025</div>
+                <div class="cert-issuer">Western Governors University</div>
             </div>
         </div>
     </section>
@@ -740,8 +775,8 @@
             </div>
             <div class="about-grid">
                 <div class="about-content animate">
-                    <p>I'm a data analyst based in North Carolina. I started my career as a physical therapist assistant and continue to work PRN while building my data analytics practice. Over the past five years, I've tracked patient outcomes, maintained health records, and seen firsthand how good data supports better clinical decisions.</p>
-                    <p>On the data side, I focus on building dashboards, automating reporting, and creating systems to organize and track information. I'm especially interested in full-time roles where I can combine my healthcare background with my technical skills.</p>
+                    <p>I'm a data analyst based in North Carolina. I started my career as a physical therapist assistant — tracking patient outcomes, maintaining health records, and learning how good data supports better decisions. That clinical background gave me a different perspective on how data actually gets used by the people who rely on it.</p>
+                    <p>Now I focus on building dashboards, automating reporting, and creating data systems that help teams work smarter. I'm looking for full-time data analyst roles, remote or in NC.</p>
                     <div class="about-hobbies">
                         <div class="hobby-card">
                             <div class="hobby-icon">🏗️</div>
@@ -791,7 +826,7 @@
     </section>
 
     <footer>
-        <p>© 2026 Davis Rapp</p>
+        <p>&copy; 2026 Davis Rapp</p>
     </footer>
 
     <script>
