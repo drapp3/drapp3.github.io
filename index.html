@@ -241,9 +241,7 @@
             flex-direction: column;
         }
         .project-card:hover { transform: translateY(-6px); border-color: var(--accent-blue); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
-        .project-card.featured {
-            grid-column: 1 / -1;
-        }
+        .project-card.featured { grid-column: 1 / -1; }
         .project-category {
             display: inline-flex;
             align-items: center;
@@ -260,6 +258,7 @@
         .project-category.ml { background: rgba(139, 92, 246, 0.15); color: var(--accent-purple); }
         .project-category.healthcare { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); }
         .project-category.engineering { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
+        .project-category.ops { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
         .project-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3; }
         .project-details { flex-grow: 1; margin-bottom: 1.25rem; }
         .project-detail { display: flex; gap: 0.5rem; margin-bottom: 0.6rem; font-size: 0.9rem; color: var(--text-secondary); }
@@ -445,7 +444,7 @@
                 <a href="https://github.com/drapp3" target="_blank" class="social-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
-                <a href="https://linkedin.com/in/davis-rapp" target="_blank" class="social-link">
+                <a href="https://www.linkedin.com/in/davis-rapp-2b7167128/" target="_blank" class="social-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
                 <a href="mailto:drappanalysis@gmail.com" class="social-link">
@@ -497,20 +496,20 @@
                         <span class="exp-badge">Current</span>
                     </div>
                     <p class="exp-description">
-                        Built a Python ETL pipeline and automated data entry workflows for Jobber CRM data across 200+ monthly projects, reducing manual workload by 20+ hours per month and improving data consistency. Developed Tableau and Excel dashboards used by leadership to monitor revenue, close rates, and crew efficiency. Delivered SQL and Python analyses on service profitability, job delays, and sales performance, directly informing pricing adjustments and workflow decisions.
+                        Built a Python ETL pipeline integrating Jobber CRM data across 200+ monthly projects, implementing data validation and transformation logic that reduced manual reporting by 20+ hours per month. Developed Tableau and Excel dashboards used by leadership to track revenue, close rates, and crew efficiency. Performed exploratory and operational analysis on service profitability, job delays, and sales performance, directly informing pricing changes and surfacing workflow bottlenecks.
                     </p>
                 </div>
                 <div class="exp-card animate">
                     <div class="exp-header">
                         <div>
                             <h3 class="exp-title">Physical Therapist Assistant (PRN)</h3>
-                            <div class="exp-company">Various Rehab Companies</div>
+                            <div class="exp-company">Multiple Rehab Facilities</div>
                             <div class="exp-date">Feb 2021 – Present</div>
                         </div>
                         <span class="exp-badge">Current</span>
                     </div>
                     <p class="exp-description">
-                        Analyzed patient outcome metrics including range of motion, pain scores, and functional mobility to evaluate treatment effectiveness. Maintained electronic health records for 1,000+ patients across multiple facilities with full documentation compliance.
+                        Analyzed patient outcome data (ROM, pain scores, mobility metrics) to identify treatment effectiveness trends and support clinical decision-making. Maintained and validated structured EHR data for 1,000+ patients across multiple facilities, ensuring data integrity, compliance, and consistency across systems.
                     </p>
                 </div>
             </div>
@@ -523,6 +522,36 @@
             <h2 class="section-title">Projects</h2>
         </div>
         <div class="projects-grid">
+            <div class="project-card featured animate">
+                <span class="project-category ops">Operations Analytics</span>
+                <h3>Supply Chain Operations Dashboard</h3>
+                <div class="project-details">
+                    <div class="project-detail">
+                        <span class="project-detail-label">Problem:</span>
+                        <span>Track supplier delivery performance, inventory health, and operational KPIs across a multi-warehouse supply chain</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Data:</span>
+                        <span>2,500 purchase orders across 10 suppliers, 5 warehouses, and 15 product SKUs</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Outcome:</span>
+                        <span>End-to-end pipeline (Python ETL → SQLite → React dashboard) surfacing 58% on-time rate, 8 critical inventory alerts, and supplier scorecards</span>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">SQL</span>
+                    <span class="project-tag">SQLite</span>
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Recharts</span>
+                    <span class="project-tag">ETL</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://drapp3.github.io/supply-chain-analytics/" class="project-link-secondary">Live Demo</a>
+                    <a href="https://github.com/drapp3/supply-chain-analytics" class="project-link">View Project</a>
+                </div>
+            </div>
             <div class="project-card animate">
                 <span class="project-category healthcare">Healthcare Analytics</span>
                 <h3>Inpatient Readmission Risk Analysis</h3>
@@ -542,9 +571,9 @@
                 </div>
                 <div class="project-tags">
                     <span class="project-tag">Python</span>
+                    <span class="project-tag">SQL</span>
                     <span class="project-tag">scikit-learn</span>
                     <span class="project-tag">Tableau</span>
-                    <span class="project-tag">Random Forest</span>
                 </div>
                 <div class="project-footer">
                     <a href="https://github.com/drapp3/hospital-readmission-analysis#readme" class="project-link-secondary">View README</a>
@@ -572,11 +601,41 @@
                     <span class="project-tag">Python</span>
                     <span class="project-tag">scikit-learn</span>
                     <span class="project-tag">SMOTE</span>
-                    <span class="project-tag">Classification</span>
+                    <span class="project-tag">pandas</span>
                 </div>
                 <div class="project-footer">
                     <a href="https://github.com/drapp3/auto-insurance-fraud-detection#readme" class="project-link-secondary">View README</a>
                     <a href="https://github.com/drapp3/auto-insurance-fraud-detection" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card animate">
+                <span class="project-category engineering">Data Engineering</span>
+                <h3>Polymarket Wallet Tracker</h3>
+                <div class="project-details">
+                    <div class="project-detail">
+                        <span class="project-detail-label">Problem:</span>
+                        <span>Track top-performing prediction market traders in real time and surface where sharp money is moving</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Stack:</span>
+                        <span>Python FastAPI backend with five concurrent async polling loops, SQLite with WAL mode, vanilla JS frontend</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Outcome:</span>
+                        <span>Real-time alert system with trade diffing, resolution tracking, wallet sharpness scoring, and market convergence detection</span>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">FastAPI</span>
+                    <span class="project-tag">Async</span>
+                    <span class="project-tag">SQLite</span>
+                    <span class="project-tag">REST APIs</span>
+                    <span class="project-tag">ETL</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/drapp3/polymarket-wallet-tracker#readme" class="project-link-secondary">View README</a>
+                    <a href="https://github.com/drapp3/polymarket-wallet-tracker" class="project-link">View Project</a>
                 </div>
             </div>
             <div class="project-card animate">
@@ -634,36 +693,6 @@
                     <a href="https://github.com/drapp3/sales-performance-dashboard" class="project-link">View Project</a>
                 </div>
             </div>
-            <div class="project-card featured animate">
-                <span class="project-category engineering">Data Engineering</span>
-                <h3>Polymarket Wallet Tracker</h3>
-                <div class="project-details">
-                    <div class="project-detail">
-                        <span class="project-detail-label">Problem:</span>
-                        <span>Track top-performing prediction market traders in real time and surface where sharp money is moving</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Stack:</span>
-                        <span>Python FastAPI backend with five concurrent async polling loops, SQLite with WAL mode, vanilla JS frontend</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Outcome:</span>
-                        <span>Real-time alert system with trade diffing, resolution tracking, wallet sharpness scoring, and market convergence detection</span>
-                    </div>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">FastAPI</span>
-                    <span class="project-tag">Async</span>
-                    <span class="project-tag">SQLite</span>
-                    <span class="project-tag">REST APIs</span>
-                    <span class="project-tag">ETL</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/drapp3/polymarket-wallet-tracker#readme" class="project-link-secondary">View README</a>
-                    <a href="https://github.com/drapp3/polymarket-wallet-tracker" class="project-link">View Project</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -676,12 +705,12 @@
             <div class="skills-group">
                 <div class="skills-group-title">Languages</div>
                 <div class="skills-tags">
-                    <span class="skill-tag">SQL (PostgreSQL, MySQL)</span>
                     <span class="skill-tag">Python (pandas, NumPy, scikit-learn)</span>
+                    <span class="skill-tag">SQL (PostgreSQL, MySQL, SQLite)</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-group-title">Tools</div>
+                <div class="skills-group-title">Visualization</div>
                 <div class="skills-tags">
                     <span class="skill-tag">Tableau</span>
                     <span class="skill-tag">Power BI</span>
@@ -813,7 +842,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     drappanalysis@gmail.com
                 </a>
-                <a href="https://linkedin.com/in/davis-rapp" target="_blank" class="contact-link">
+                <a href="https://www.linkedin.com/in/davis-rapp-2b7167128/" target="_blank" class="contact-link">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     LinkedIn
                 </a>
