@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davis Rapp | Data & Operations</title>
+    <title>Davis Rapp | Healthcare Operations &amp; Data</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -208,7 +208,7 @@
         .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.75rem; }
         .section-subtitle { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 3rem; }
         .section-header { text-align: center; margin-bottom: 3rem; }
-        .experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .exp-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -217,8 +217,8 @@
             transition: all 0.3s ease;
         }
         .exp-card:hover { border-color: var(--accent-green); }
-        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-        .exp-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; gap: 1rem; }
+        .exp-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
         .exp-badge {
             padding: 0.3rem 0.75rem;
             background: rgba(34, 197, 94, 0.15);
@@ -226,6 +226,7 @@
             border-radius: 6px;
             font-size: 0.75rem;
             font-weight: 600;
+            white-space: nowrap;
         }
         .exp-company { color: var(--accent-green); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.25rem; }
         .exp-date { color: var(--text-muted); font-size: 0.85rem; }
@@ -321,7 +322,7 @@
         .side-project-status { margin-left: auto; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
         .side-project-status.done { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
         .side-project-status.wip { background: rgba(234, 179, 8, 0.15); color: var(--accent-yellow); }
-        .certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .cert-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -336,6 +337,8 @@
         .cert-icon.purple { background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)); }
         .cert-icon.orange { background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 179, 8, 0.2)); }
         .cert-icon.green { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(6, 182, 212, 0.2)); }
+        .cert-name { font-weight: 600; margin-bottom: 0.25rem; }
+        .cert-issuer { font-size: 0.85rem; color: var(--text-secondary); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .about-content p { color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7; font-size: 1.05rem; }
         .about-hobbies { display: flex; gap: 1rem; margin-top: 1.5rem; }
@@ -386,7 +389,11 @@
         footer p { font-size: 0.9rem; color: var(--text-muted); }
         .animate { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
         .animate.visible { opacity: 1; transform: translateY(0); }
-        @media (max-width: 1200px) { .certs-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (prefers-reduced-motion: reduce) {
+            .animate { opacity: 1; transform: none; transition: none; }
+            .typing-label .cursor { animation: none; }
+        }
+        @media (max-width: 1200px) { .certs-grid { grid-template-columns: repeat(2, 1fr); } .experience-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; padding: 7rem 2rem 3rem; }
             .hero-right { flex: none; width: 100%; max-width: 380px; }
@@ -409,7 +416,7 @@
             <div class="logo-icon">DR</div>
             <div class="logo-text">
                 <span class="logo-name">Davis<span>Rapp</span></span>
-                <span class="logo-title">Data & Operations</span>
+                <span class="logo-title">Healthcare Operations &amp; Data</span>
             </div>
         </div>
         <ul class="nav-links">
@@ -425,11 +432,11 @@
     <section class="hero" id="home">
         <div class="hero-left">
             <div class="typing-label">
-                I'm a <span class="typed">Data &amp; Operations</span><span class="cursor"></span>
+                I'm a <span class="typed">Licensed PTA</span><span class="cursor"></span>
             </div>
-            <h1>Making data<br><span class="gradient">useful.</span></h1>
+            <h1>Clinician who<br><span class="gradient">reads the data.</span></h1>
             <p class="hero-description">
-                Hi, I'm Davis Rapp. I build reporting workflows, clean CRM and operational data, and create dashboards in SQL, Python, Excel, Tableau, and Power BI. My work focuses on practical business questions like close rates, job performance, readmissions, and operational trends.
+                Hi, I'm Davis Rapp. I'm a licensed physical therapist assistant with a B.S. in Data Analytics. I've spent five years inside home health and skilled nursing, working in Epic, PointClickCare, Net Health, and MatrixCare, and I build reporting workflows, clean operational data, and create dashboards in SQL, Python, Excel, and Tableau. I'm looking for roles where both halves matter: healthcare operations, clinical informatics, implementation, clinical device support, and analytics.
             </p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">
@@ -441,13 +448,13 @@
                 </a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/drapp3" target="_blank" class="social-link">
+                <a href="https://github.com/drapp3" target="_blank" class="social-link" aria-label="GitHub">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
-                <a href="https://www.linkedin.com/in/davis-rapp-2b7167128/" target="_blank" class="social-link">
+                <a href="https://www.linkedin.com/in/davis-rapp-2b7167128/" target="_blank" class="social-link" aria-label="LinkedIn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
-                <a href="mailto:drappanalysis@gmail.com" class="social-link">
+                <a href="mailto:drappanalysis@gmail.com" class="social-link" aria-label="Email">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </a>
             </div>
@@ -456,23 +463,23 @@
             <div class="profile-card">
                 <img src="headshot.png" alt="Davis Rapp" class="profile-image">
                 <h2 class="profile-name">Davis Rapp</h2>
-                <p class="profile-title">Data & Operations</p>
+                <p class="profile-title">Licensed PTA | B.S. Data Analytics</p>
                 <div class="profile-skills">
+                    <div class="profile-skill">
+                        <div class="profile-skill-name">EHR Systems</div>
+                        <div class="profile-skill-desc">Epic, PointClickCare, Net Health, MatrixCare</div>
+                    </div>
                     <div class="profile-skill">
                         <div class="profile-skill-name">SQL</div>
                         <div class="profile-skill-desc">Queries and reporting</div>
-                    </div>
-                    <div class="profile-skill">
-                        <div class="profile-skill-name">Tableau</div>
-                        <div class="profile-skill-desc">Dashboards</div>
                     </div>
                     <div class="profile-skill">
                         <div class="profile-skill-name">Python</div>
                         <div class="profile-skill-desc">Cleaning and automation</div>
                     </div>
                     <div class="profile-skill">
-                        <div class="profile-skill-name">Excel</div>
-                        <div class="profile-skill-desc">Analysis and reporting</div>
+                        <div class="profile-skill-name">Excel &amp; Tableau</div>
+                        <div class="profile-skill-desc">Analysis and dashboards</div>
                     </div>
                 </div>
             </div>
@@ -489,27 +496,40 @@
                 <div class="exp-card animate">
                     <div class="exp-header">
                         <div>
-                            <h3 class="exp-title">Data &amp; Operations Consultant</h3>
-                            <div class="exp-company">DryWorx</div>
-                            <div class="exp-date">Sept 2023 – Present</div>
-                        </div>
-                        <span class="exp-badge">Current</span>
-                    </div>
-                    <p class="exp-description">
-                        Built Python and Excel workflows for Jobber CRM data covering jobs, invoices, customers, lead sources, payments, scheduling, and salesperson activity. Added checks for duplicate customers, missing fields, inconsistent job types, and misentered records. Created Excel dashboards using pivot tables and XLOOKUP to review close rates by job type, region, salesperson, lead source, crew performance, and service profitability.
-                    </p>
-                </div>
-                <div class="exp-card animate">
-                    <div class="exp-header">
-                        <div>
-                            <h3 class="exp-title">Physical Therapist Assistant (PRN)</h3>
-                            <div class="exp-company">Multiple Rehab Facilities</div>
+                            <h3 class="exp-title">Physical Therapist Assistant</h3>
+                            <div class="exp-company">Home Health &amp; Skilled Nursing, Multiple Providers</div>
                             <div class="exp-date">Feb 2021 – Present</div>
                         </div>
                         <span class="exp-badge">Current</span>
                     </div>
                     <p class="exp-description">
-                        Document patient treatments, progress notes, and functional outcomes in EHR systems including PointClickCare, Net Health, Epic, and MatrixCare. Track functional measures such as range of motion, pain scores, gait, balance, mobility status, and patient progress across rehab settings.
+                        Manage 25+ home-health visits per week and provide coverage across four organizations, documenting in PointClickCare, Net Health, Epic, and MatrixCare. Complete Medicare and payer-required documentation and EVV visit verification, and coordinate routes and schedule changes with patients, families, case managers, and office staff.
+                    </p>
+                </div>
+                <div class="exp-card animate">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-title">Operations Consultant (Project-Based)</h3>
+                            <div class="exp-company">DryWorx</div>
+                            <div class="exp-date">Sept 2025 – Present</div>
+                        </div>
+                        <span class="exp-badge">Current</span>
+                    </div>
+                    <p class="exp-description">
+                        Built and launched a replacement company website using AI-assisted development tools, coordinated lead routing and tracking-number changes with the SEO vendor, and manage intake and follow-up for 50+ leads per month in Jobber. Built Python and Excel workflows on the Jobber data to flag duplicate customers and missing fields and to review close rates by job type, lead source, and salesperson.
+                    </p>
+                </div>
+                <div class="exp-card animate">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-title">AI Model Evaluator (Contract)</h3>
+                            <div class="exp-company">Mercor</div>
+                            <div class="exp-date">Sept 2026 – Present</div>
+                        </div>
+                        <span class="exp-badge">Current</span>
+                    </div>
+                    <p class="exp-description">
+                        Evaluate AI-generated responses and slide decks against project rubrics for accuracy, clarity, and formatting, writing a short rationale to support each score.
                     </p>
                 </div>
             </div>
@@ -523,6 +543,34 @@
         </div>
         <div class="projects-grid">
             <div class="project-card animate">
+                <span class="project-category healthcare">Healthcare Analytics</span>
+                <h3>Inpatient Readmission Risk Analysis</h3>
+                <div class="project-details">
+                    <div class="project-detail">
+                        <span class="project-detail-label">Problem:</span>
+                        <span>Identify drivers of 30-day hospital readmissions and segment patients by risk level</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Data:</span>
+                        <span>101,766 patient encounters from 130 US hospitals, audited to a 99,343-encounter analysis cohort</span>
+                    </div>
+                    <div class="project-detail">
+                        <span class="project-detail-label">Outcome:</span>
+                        <span>Patient-grouped classification workflow with a Tableau dashboard; held-out risk tiers separated 30-day readmission rates from 8.1% (low) to 22.5% (high)</span>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">SQL</span>
+                    <span class="project-tag">scikit-learn</span>
+                    <span class="project-tag">Tableau</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://public.tableau.com/views/HospitalReadmissionRiskAnalysis_17745410531980/Dashboard1" target="_blank" class="project-link-secondary">Tableau Dashboard</a>
+                    <a href="https://github.com/drapp3/hospital-readmission-analysis" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card animate">
                 <span class="project-category ops">Operations Analytics</span>
                 <h3>Supply Chain Operations Dashboard</h3>
                 <div class="project-details">
@@ -532,11 +580,11 @@
                     </div>
                     <div class="project-detail">
                         <span class="project-detail-label">Data:</span>
-                        <span>2,500 purchase orders across 10 suppliers, 5 warehouses, and 15 product SKUs</span>
+                        <span>2,500 synthetic purchase orders across 10 suppliers, 5 warehouses, and 15 product SKUs</span>
                     </div>
                     <div class="project-detail">
                         <span class="project-detail-label">Outcome:</span>
-                        <span>Python ETL pipeline into SQLite with a React dashboard showing supplier on-time performance, inventory alerts, warehouse utilization, and category spend</span>
+                        <span>Python validation and load into a normalized five-table SQLite database, with a React dashboard showing supplier on-time performance, inventory alerts, warehouse utilization, and category spend</span>
                     </div>
                 </div>
                 <div class="project-tags">
@@ -553,34 +601,6 @@
                 </div>
             </div>
             <div class="project-card animate">
-                <span class="project-category healthcare">Healthcare Analytics</span>
-                <h3>Inpatient Readmission Risk Analysis</h3>
-                <div class="project-details">
-                    <div class="project-detail">
-                        <span class="project-detail-label">Problem:</span>
-                        <span>Identify drivers of 30-day hospital readmissions and segment patients by risk level</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Data:</span>
-                        <span>101,766 patient encounters from 130 US hospitals</span>
-                    </div>
-                    <div class="project-detail">
-                        <span class="project-detail-label">Outcome:</span>
-                        <span>Risk-tiered patients into Low/Med/High groups; high-risk showed 3x readmission rate (22.9%) vs low-risk (7.8%)</span>
-                    </div>
-                </div>
-                <div class="project-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">SQL</span>
-                    <span class="project-tag">scikit-learn</span>
-                    <span class="project-tag">Tableau</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/drapp3/hospital-readmission-analysis#readme" class="project-link-secondary">View README</a>
-                    <a href="https://github.com/drapp3/hospital-readmission-analysis" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card animate">
                 <span class="project-category ml">Machine Learning</span>
                 <h3>Auto Insurance Fraud Detection</h3>
                 <div class="project-details">
@@ -590,11 +610,11 @@
                     </div>
                     <div class="project-detail">
                         <span class="project-detail-label">Data:</span>
-                        <span>15,000+ claims with 30+ features</span>
+                        <span>15,420 public claims with 30+ features and a 5.99% fraud rate</span>
                     </div>
                     <div class="project-detail">
                         <span class="project-detail-label">Outcome:</span>
-                        <span>Compared precision, recall, ROC-AUC, and false-negative cost tradeoffs after SMOTE and threshold tuning</span>
+                        <span>Compared precision, recall, ROC-AUC, and decision-threshold tradeoffs after SMOTE, prioritizing recall to reduce missed fraud in a manual-review workflow</span>
                     </div>
                 </div>
                 <div class="project-tags">
@@ -698,10 +718,23 @@
 
     <section id="skills">
         <div class="section-header">
-            <div class="section-badge">Technical Skills</div>
+            <div class="section-badge">Skills</div>
             <h2 class="section-title">My Toolkit</h2>
         </div>
         <div class="skills-container animate">
+            <div class="skills-group">
+                <div class="skills-group-title">Healthcare</div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Epic</span>
+                    <span class="skill-tag">PointClickCare</span>
+                    <span class="skill-tag">Net Health</span>
+                    <span class="skill-tag">MatrixCare</span>
+                    <span class="skill-tag">EVV</span>
+                    <span class="skill-tag">Medicare &amp; Payer Documentation</span>
+                    <span class="skill-tag">HIPAA</span>
+                    <span class="skill-tag">Scheduling &amp; Care Coordination</span>
+                </div>
+            </div>
             <div class="skills-group">
                 <div class="skills-group-title">Languages</div>
                 <div class="skills-tags">
@@ -721,17 +754,21 @@
                 <div class="skills-group-title">Data</div>
                 <div class="skills-tags">
                     <span class="skill-tag">Data Cleaning</span>
+                    <span class="skill-tag">Data Validation</span>
                     <span class="skill-tag">Data Modeling</span>
                     <span class="skill-tag">Dashboards</span>
-                    <span class="skill-tag">Statistical Analysis</span>
+                    <span class="skill-tag">KPI Reporting</span>
                 </div>
             </div>
             <div class="skills-group">
-                <div class="skills-group-title">Engineering</div>
+                <div class="skills-group-title">Operations &amp; Engineering</div>
                 <div class="skills-tags">
+                    <span class="skill-tag">Jobber CRM</span>
+                    <span class="skill-tag">Lead Intake &amp; Follow-up</span>
+                    <span class="skill-tag">Workflow Documentation</span>
+                    <span class="skill-tag">AI-Assisted Tools</span>
                     <span class="skill-tag">ETL Pipelines</span>
                     <span class="skill-tag">API Integration</span>
-                    <span class="skill-tag">Automation</span>
                     <span class="skill-tag">Git/GitHub</span>
                     <span class="skill-tag">AWS</span>
                 </div>
@@ -770,9 +807,14 @@
     <section id="certifications">
         <div class="section-header">
             <div class="section-badge">Credentials</div>
-            <h2 class="section-title">Certifications and Education</h2>
+            <h2 class="section-title">License, Certifications and Education</h2>
         </div>
         <div class="certs-grid">
+            <div class="cert-card animate">
+                <div class="cert-icon green">🩺</div>
+                <div class="cert-name">Licensed Physical Therapist Assistant</div>
+                <div class="cert-issuer">North Carolina</div>
+            </div>
             <div class="cert-card animate">
                 <div class="cert-icon blue">📊</div>
                 <div class="cert-name">CompTIA Data+</div>
@@ -790,8 +832,13 @@
             </div>
             <div class="cert-card animate">
                 <div class="cert-icon green">🎓</div>
-                <div class="cert-name">BS Data Analytics</div>
+                <div class="cert-name">B.S. Data Analytics</div>
                 <div class="cert-issuer">Western Governors University</div>
+            </div>
+            <div class="cert-card animate">
+                <div class="cert-icon blue">🎓</div>
+                <div class="cert-name">A.A.S. Physical Therapist Assistant</div>
+                <div class="cert-issuer">Central Piedmont Community College</div>
             </div>
         </div>
     </section>
@@ -804,8 +851,8 @@
             </div>
             <div class="about-grid">
                 <div class="about-content animate">
-                    <p>I'm a data and operations professional based in North Carolina. I started my career as a physical therapist assistant, documenting patient treatments, tracking functional measures, and working in EHR systems where accurate records matter. That clinical background gave me a different perspective on how data actually gets used by the people who rely on it.</p>
-                    <p>Now I focus on building dashboards, automating reporting, and creating data systems that help teams work smarter. I'm looking for full-time data, BI, reporting, or operations analyst roles, remote or in North Carolina.</p>
+                    <p>I'm a licensed physical therapist assistant based in Charlotte, North Carolina, with a B.S. in Data Analytics. For five years I've worked in home health and skilled nursing across four organizations and four EHR systems, which means I've seen how clinical workflows, documentation requirements, and software actually fit together, and where they don't.</p>
+                    <p>Outside of patient care I build reporting workflows, clean operational data, and put together dashboards in SQL, Python, Excel, and Tableau. I'm looking for roles where both halves matter: healthcare operations, clinical informatics and EHR support, implementation and customer success at health-tech companies, clinical specialist roles in medical devices, and healthcare analytics. Remote or Charlotte.</p>
                     <div class="about-hobbies">
                         <div class="hobby-card">
                             <div class="hobby-icon">🏗️</div>
@@ -835,7 +882,7 @@
             <div class="section-header">
                 <div class="section-badge">Contact</div>
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Looking for data, BI, reporting, and operations roles in NC or remote.</p>
+                <p class="section-subtitle">Open to healthcare operations, informatics, implementation, clinical device, and analytics roles. Remote or Charlotte, NC.</p>
             </div>
             <div class="contact-links">
                 <a href="mailto:drappanalysis@gmail.com" class="contact-link">
@@ -879,7 +926,7 @@
             });
         });
 
-        const titles = ['Data & Operations', 'BI Analyst', 'Reporting Analyst', 'Operations Analyst'];
+        const titles = ['Licensed PTA', 'Healthcare Operations', 'Clinical Informatics', 'Data & Analytics', 'Implementation'];
         let titleIndex = 0, charIndex = 0, isDeleting = false;
         const typedElement = document.querySelector('.typed');
 
